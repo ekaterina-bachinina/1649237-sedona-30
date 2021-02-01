@@ -1,0 +1,234 @@
+/*Fonts*/
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url("../fonts/PTSans.woff2") format("woff2"),
+    url("../fonts/PTSans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url("../fonts/PTSans-Bold.woff2") format("woff2"),
+    url("../fonts/PTSans-Bold.woff") format("woff");
+}
+
+
+/*Variables*/
+
+:root {
+
+  /* фон  */
+  --basic-white: #FFFFFF;
+  --basic-blue: #81B3D2;
+  --basic-extra-light: #EEEEEE;
+  --footer: rgba(255, 255, 255, 0.9);
+
+
+  /* текст  */
+
+  /* основной текст и при состоянии покоя  */
+  --basic-black: #000000;
+
+  --thin-text: #333333;
+  --basic-white: #FFFFFF;
+
+
+
+  /* рейтинг  */
+  --rating-text: #666666;
+
+  /* активная страница  */
+  --nav-test: #766357;
+
+
+  /* Кнопки*/
+
+  /* подробнее  */
+  --basic-blue: #81B3D2;
+  --more-hover: #669EC0;
+  --more-focus: #5496BD;
+
+  /* забранировать и найти гостиницу */
+  --book-current: #766357;
+  --book-hover: #604E43;
+  --book-focus: #503E33;
+
+  /* поля формы ввода данных для поиска гостиницы  */
+
+  --form-field-current: #F2F2F2;
+  --form-field-hover: #EBEBEB;
+  --basic-white: #FFFFFF;
+
+
+  /*  Логотип академии */
+  --logo-current: #231F20;
+  --basic-blue: #81B3D2;
+  --logo-focus: #BDBBBC;
+
+}
+
+/*Global*/
+
+.page-body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  /* В макете не смогла определить какой размер шрифта основной. Насчитала 8 размеров  */
+  font-size: 14px;
+  line-height: 24px;
+
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-white);
+  text-align: center;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* Навигация по сайту  */
+
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+  background-color: transparent;
+}
+
+.main-navigation-wrapper {
+  background-color: var(--basic-white);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+
+
+.site-navigation a {
+  color: var(--basic-black);
+  text-decoration: underline;
+}
+
+/* Убираем точечки в списке  */
+.site-navigation {
+  list-style: none;
+}
+
+/* Блок с логотипом про Седону  */
+
+.desc {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.desc a {
+  color: var(--basic-black);
+  text-decoration: underline;
+}
+
+
+.desc-pic {
+  background: var(--basic-blue) url("../img/background-photo.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+
+/*Список приемуществ*/
+.feature-item {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  font-weight: 700;
+}
+
+.feature-item-reversing {
+  color: var(--basic-white);
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  background-color: var(--basic-blue);
+}
+
+.feature-item-about {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.index-columns {
+  background-color: var(--basic-extra-light);
+}
+
+.colum {
+  background-color: var(--basic-white);
+}
+
+/*Блок заинтересовалиь*/
+
+.question {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.search-content {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--thin-text);
+}
+
+
+.search-button {
+  color: var(--basic-white);
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  background-color: var(--book-current);
+}
+
+.search-button-find {
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+
+}
+
+.modal {
+  text-align: left;
+}
+
+.amount {
+  text-align: center;
+}
+
+.appointment-item {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.copy-logo {
+  fill: var(--logo-current)
+}
+
+.footer-social {
+  text-align: center;
+}
