@@ -37,8 +37,7 @@
 
   --thin-text: #333333;
   --basic-white: #FFFFFF;
-
-
+  --transparent-white: rgba(255, 255, 255, 0.3);
 
   /* рейтинг  */
   --rating-text: #666666;
@@ -54,8 +53,8 @@
   --more-hover: #669EC0;
   --more-focus: #5496BD;
 
-  /* забранировать и найти гостиницу */
-  --book-current: #766357;
+  /* забронировать и найти гостиницу */
+  --nav-test: #766357;
   --book-hover: #604E43;
   --book-focus: #503E33;
 
@@ -64,6 +63,7 @@
   --form-field-current: #F2F2F2;
   --form-field-hover: #EBEBEB;
   --basic-white: #FFFFFF;
+  --border-color: #E5E5E5;
 
 
   /*  Логотип академии */
@@ -82,15 +82,13 @@
   font-family: "PT Sans", "Arial", sans-serif;
   /* В макете не смогла определить какой размер шрифта основной. Насчитала 8 размеров  */
   font-size: 14px;
-  line-height: 24px;
-
+  line-height: 26px;
   font-weight: 400;
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-white);
   text-align: center;
 }
-
 
 img {
   max-width: 100%;
@@ -117,18 +115,29 @@ a {
 
 .site-navigation {
   list-style: none;
+  color: var(--basic-black);
+  font-weight: 700;
 }
 
+/* взято из образца
+.site-navigation-current a:not([href]) {
+  background-color: var(--basic-black);
+}*/
 
+
+/* User navigation */
 
 .site-navigation a {
   color: var(--basic-black);
-  text-decoration: underline;
 }
 
-/* Убираем точечки в списке  */
-.site-navigation {
-  list-style: none;
+.site-navigation a:hover {
+  color: var(--basic-blue);
+}
+
+.site-navigation a:active {
+  color: var(--basic-black);
+  opacity: 0.3;
 }
 
 /* Блок с логотипом про Седону  */
@@ -144,33 +153,29 @@ a {
   text-decoration: underline;
 }
 
-
 .desc-pic {
   background: var(--basic-blue) url("../img/background-photo.jpg");
   background-position: top center;
   background-repeat: no-repeat;
 }
 
-
 /*Список приемуществ*/
-.feature-item {
-  font-size: 21px;
-  line-height: 21px;
-  color: var(--basic-black);
-  font-weight: 700;
-}
 
 .feature-item-reversing {
   color: var(--basic-white);
+  background-color: var(--basic-blue);
+}
+
+.feature-item-title {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
-  background-color: var(--basic-blue);
 }
 
 .feature-item-about {
   font-size: 14px;
   line-height: 21px;
+  font-weight: 400;
 }
 
 .index-columns {
@@ -185,6 +190,7 @@ a {
 
 .question {
   font-size: 30px;
+  line-height: 24px;
   font-weight: 700;
 }
 
@@ -194,14 +200,26 @@ a {
   color: var(--thin-text);
 }
 
-
 .search-button {
   color: var(--basic-white);
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
-  background-color: var(--book-current);
+  background-color: var(--nav-test);
+  font-weight: 700;
+  border: none;
 }
+
+.search-button:hover {
+  background-color: var(--book-hover);
+  color: var(--basic-white);
+}
+
+.search-button:active {
+  background-color: var(--book-focus);
+  color: var(--transparent-white);
+}
+
 
 .search-button-find {
   background-color: var(--basic-blue);
@@ -209,21 +227,63 @@ a {
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+}
+
+.search-button-find:hover {
+  background-color: var(--more-hover);
+}
+
+.search-button-find:active {
+  background-color: var(--more-focus);
 
 }
 
 .modal {
   text-align: left;
+  font-weight: 700;
 }
 
 .amount {
   text-align: center;
+  background-color: var(--form-field-current);
+  border: 2px solid var(--form-field-current);
 }
 
 .appointment-item {
   font-size: 14px;
   line-height: 26px;
+  font-weight: 700;
 }
+
+.box {
+  background-color: var(--form-field-current);
+  border: 2px solid var(--form-field-current);
+}
+
+.box:hover {
+  background-color: var(--form-field-hover);
+  border-color: var(--form-field-hover);
+}
+
+.box:focus {
+  background-color: var(--basic-white);
+  border-color: var(--border-color);
+  outline: none;
+}
+
+.amount:hover {
+  background-color: var(--form-field-hover);
+  border-color: var(--form-field-hover);
+}
+
+.amount:focus {
+  background-color: var(--basic-white);
+  border-color: var(--border-color);
+  outline: none;
+}
+
 
 .copy-logo {
   fill: var(--logo-current)
@@ -232,3 +292,40 @@ a {
 .footer-social {
   text-align: center;
 }
+
+
+/* Main footer */
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+
+/* social */
+
+.social-button {
+  background-color: var(--basic-blue);
+  display: block;
+  width: 46px;
+  height: 48px;
+}
+
+.social-button:hover {
+  background-color: var(--more-hover);
+}
+
+.social-button:active {
+  background-color: var(--more-focus);
+  /* тут надо еще поменять цвет пиктограммы. Как? */
+}
+
+.social-button svg {
+  fill: var(--basic-white);
+}
+
+
+/* Сделать активность кнопки Академии  */

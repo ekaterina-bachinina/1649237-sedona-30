@@ -5,8 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <!-- если подключаю этот файл, то на заголовки h1 действуют дополнительные свойста, которые не нужны. Что делать?  -->
-  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Фавиконки -->
@@ -22,7 +21,7 @@
 
   <header class="main-header">
     <nav class="main-navigation">
-      <a class="main-header-logo">
+      <a class="">
         <img src="img/logo.svg" width="138" height="70" alt="Логотип город Седона">
       </a>
       <div class="main-navigation-wrapper">
@@ -33,7 +32,6 @@
           <li><a href="catalog.html">Гостиницы</a></li>
         </ul>
       </div>
-
     </nav>
   </header>
 
@@ -49,35 +47,35 @@
 
       <!-- блок Преимуществ  -->
 
-      <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+      <h1 class="desc">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
       <p class="page-body">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
 
       <ul class="site-navigation">
         <!-- Приемущество 1   -->
         <li class="feature-item-reversing">
-          <h2>Настоящий городок</h2>
+          <h2 class="feature-item-title">Настоящий городок</h2>
           <div class="feature-item-about">
-            <p></p>— №1 —</p>
+            <p>— №1 —</p>
             <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
             <img src="img/real-town.jpg" width="800" height="256" alt="Настоящий городок">
           </div>
 
 
           <ul class="site-navigation colum">
-            <li class="feature-item">
+            <li class="feature-item-title">
               <img src="img/housing.svg" width="75" height="72" alt="Жильё">
-              <h2>Жильё</h2>
+              <h2 class="feature-item-title">Жильё</h2>
               <p class="feature-item-about">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
 
-            <li class="feature-item">
+            <li class="feature-item-title">
               <img src="img/meal.svg" width="75" height="72" alt="Еда">
-              <h2>Еда</h2>
+              <h2 class="feature-item-title">Еда</h2>
               <p class="feature-item-about">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
 
-            <li class="feature-item">
+            <li class="feature-item-title">
               <img src="img/souvenirs.svg" width="75" height="72" alt="Сувениры">
-              <h2>Сувениры</h2>
+              <h2 class="feature-item-title">Сувениры</h2>
               <p class="feature-item-about">Не только китайского, но и местного производства!</p>
             </li>
           </ul>
@@ -87,7 +85,7 @@
 
         <!-- Приемущество 2 -->
         <li class="feature-item-reversing">
-          <h2>Там есть Мост дьявола</h2>
+          <h2 class="feature-item-title">Там есть Мост дьявола</h2>
           <div class="feature-item-about">
             <p>— №2 —</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -100,7 +98,7 @@
 
         <!-- Приемущество 3 -->
         <li class="feature-item index-columns">
-          <h2>небольшая площадь</h2>
+          <h2 class="feature-item-title">небольшая площадь</h2>
           <div class="feature-item-about">
             <p>— №3 —</p>
             <p>все достопримечательности находятся очень близко</p>
@@ -110,7 +108,7 @@
 
         <!-- Приемущество 4 -->
         <li class="feature-item index-columns">
-          <h2>красивая дорога</h2>
+          <h2 class="feature-item-title">красивая дорога</h2>
           <div class="feature-item-about">
             <p>— №4 —</p>
             <p>ехать в седону из лас-вегаса совсем не скучно!</p>
@@ -120,7 +118,7 @@
 
         <!-- Приемущество 5 -->
         <li class="feature-item index-columns">
-          <h2>мало туристов</h2>
+          <h2 class="feature-item-title">мало туристов</h2>
           <div class="feature-item-about">
             <p>— №5 —</p>
             <p>большинство едет в гранд каньон и толпится там</p>
@@ -132,9 +130,9 @@
     </section>
 
     <!-- Блок "Заинтереровались" + форма -->
-    <section>
+    <section class="search-content">
       <h2 class="question">Заинтересовались?</h2>
-      <p class="search-content">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
+      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
         Седоне </p>
 
       <button class="search-button">Поиск гостиницы в Седоне</button>
@@ -147,45 +145,46 @@
 
           <p class="appointment-item">
             <label for="appointment-date">Дата заезда:</label>
-            <input id="appointment-date" type="text" name="date" placeholder="24 апреля 2017">
+            <input class="box" id="appointment-date" type="text" name="date" placeholder="24 апреля 2017">
           </p>
 
           <p class="appointment-item">
-            <label for="appointment-date">Дата выезда:</label>
-            <input id="appointment-date" type="text" name="date" placeholder="4 июля 2017">
+            <label for="appointment-date-exit">Дата выезда:</label>
+
+            <input class="box" id="appointment-date-exit" type="text" name="date" placeholder="4 июля 2017">
+
+
           </p>
 
-          <p class="appointment-item">
+          <div class="appointment-item">
             <label for="appointment-name">Взрослые</label>
             <div>
               <button type="button">
                 <!-- Убавить  -->
-                <p class="amount">-</p>
+                <span class="amount">-</span>
               </button>
               <input class="amount" id="appointment-name" type="number" name="name" placeholder="2">
               <button type="button">
                 <!-- Добавить  -->
-                <p class="amount">+</p>
+                <span class="amount">+</span>
               </button>
             </div>
+          </div>
 
-          </p>
-
-          </p>
-          <p class="appointment-item">
-            <label for="appointment-name">Дети</label>
+          <div class="appointment-item">
+            <label for="appointment-name-child">Дети</label>
             <div>
               <button type="button">
                 <!-- Убавить  -->
-                <p class="amount">-</p>
+                <span class="amount">-</span>
               </button>
-              <input class="amount" id="appointment-name" type="number" name="name" placeholder="0">
+              <input class="amount" id="appointment-name-child" type="number" name="name" placeholder="0">
               <button type="button">
                 <!-- Добавить  -->
-                <p class="amount">+</p>
+                <span class="amount">+</span>
               </button>
             </div>
-          </p>
+          </div>
 
           <button class="search-button-find" type="submit">Найти</button>
         </form>
@@ -217,19 +216,17 @@
       <h2>Социальные сети </h2>
       <ul>
         <li>
-          <!-- надо вставить разный цвет при наведении Перекласить все логотипы обратно в белый  -->
-          <a class="social-button" href="#"></a>
-          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34501 15.9981H4.89901C4.48901 15.9981 0.735007 15.5381 0.00100708 14.1111C2.27201 14.3071 3.89401 13.6891 4.69401 12.9341C3.73401 12.6341 2.01501 12.4571 1.71501 9.98409C2.06401 10.0901 2.27901 10.2121 2.90501 10.1031C1.70501 9.24709 0.374007 8.53009 0.448007 6.33009C0.733007 6.65809 1.51501 6.86609 1.78801 6.80209C1.08501 6.56109 -0.181993 3.44209 0.894007 1.85009C2.71201 3.70409 4.62901 5.45609 8.04601 5.62309C8.25401 3.33009 9.18301 1.79309 10.95 1.14409Z"
-              fill="black" />
-          </svg>
-
+          <a class="social-button" href="#">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34501 15.9981H4.89901C4.48901 15.9981 0.735007 15.5381 0.00100708 14.1111C2.27201 14.3071 3.89401 13.6891 4.69401 12.9341C3.73401 12.6341 2.01501 12.4571 1.71501 9.98409C2.06401 10.0901 2.27901 10.2121 2.90501 10.1031C1.70501 9.24709 0.374007 8.53009 0.448007 6.33009C0.733007 6.65809 1.51501 6.86609 1.78801 6.80209C1.08501 6.56109 -0.181993 3.44209 0.894007 1.85009C2.71201 3.70409 4.62901 5.45609 8.04601 5.62309C8.25401 3.33009 9.18301 1.79309 10.95 1.14409Z" />
+            </svg>
+          </a>
         </li>
         <li>
           <a class="social-button" href="#">
             <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="black" />
+              <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" />
             </svg>
           </a>
 
@@ -240,8 +237,7 @@
             <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g filter="url(#filter0_d)">
                 <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M7 0H21C22.65 0 24 1.35 24 3V13C24 14.65 22.65 16 21 16H7C5.35 16 4 14.65 4 13V3C4 1.35 5.35 0 7 0ZM10.027 4.002V11.998L19.014 8L10.027 4.002Z"
-                  fill="black" />
+                  d="M7 0H21C22.65 0 24 1.35 24 3V13C24 14.65 22.65 16 21 16H7C5.35 16 4 14.65 4 13V3C4 1.35 5.35 0 7 0ZM10.027 4.002V11.998L19.014 8L10.027 4.002Z" />
               </g>
               <defs>
                 <filter id="filter0_d" x="0" y="0" width="28" height="24" filterUnits="userSpaceOnUse"
