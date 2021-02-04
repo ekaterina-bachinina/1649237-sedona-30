@@ -36,7 +36,6 @@
   --basic-black: #000000;
 
   --thin-text: #333333;
-  --basic-white: #FFFFFF;
   --transparent-white: rgba(255, 255, 255, 0.3);
 
   /* рейтинг  */
@@ -46,15 +45,16 @@
   --nav-test: #766357;
 
 
+
   /* Кнопки*/
 
   /* подробнее  */
-  --basic-blue: #81B3D2;
+
   --more-hover: #669EC0;
   --more-focus: #5496BD;
 
   /* забронировать и найти гостиницу */
-  --nav-test: #766357;
+
   --book-hover: #604E43;
   --book-focus: #503E33;
 
@@ -80,14 +80,26 @@
   margin: 0;
   padding: 0;
   font-family: "PT Sans", "Arial", sans-serif;
-  /* В макете не смогла определить какой размер шрифта основной. Насчитала 8 размеров  */
   font-size: 14px;
-  line-height: 26px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--thin-text);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.page-body-catalog {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
   font-weight: 400;
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-white);
-  text-align: center;
+  text-align: left;
 }
 
 img {
@@ -105,7 +117,7 @@ a {
 .main-navigation {
   font-size: 14px;
   line-height: 26px;
-  color: var(--basic-black);
+
   background-color: transparent;
 }
 
@@ -115,14 +127,15 @@ a {
 
 .site-navigation {
   list-style: none;
-  color: var(--basic-black);
+
   font-weight: 700;
 }
 
-/* взято из образца
-.site-navigation-current a:not([href]) {
-  background-color: var(--basic-black);
-}*/
+/* не работает этот класс. текущая ссылка не перекрашивается */
+.site-navigation-current {
+  color: var(--nav-test);
+
+}
 
 
 /* User navigation */
@@ -146,6 +159,14 @@ a {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  color: var(--basic-black);
+}
+
+.desc-lead {
+  color: var(--thin-text);
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
 }
 
 .desc a {
@@ -164,18 +185,29 @@ a {
 .feature-item-reversing {
   color: var(--basic-white);
   background-color: var(--basic-blue);
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
 }
 
 .feature-item-title {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
+  color: var(--basic-black);
 }
 
 .feature-item-about {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+}
+
+.feature-item-about-grey {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--thin-text);
 }
 
 .index-columns {
@@ -249,6 +281,9 @@ a {
   text-align: center;
   background-color: var(--form-field-current);
   border: 2px solid var(--form-field-current);
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
 }
 
 .appointment-item {
@@ -257,9 +292,12 @@ a {
   font-weight: 700;
 }
 
+/* как сделать, чтобы цвет не приглушался, а оставался чисто черным? */
 .box {
   background-color: var(--form-field-current);
   border: 2px solid var(--form-field-current);
+  color: var(--basic-black);
+  font-weight: 700;
 }
 
 .box:hover {
@@ -329,3 +367,53 @@ a {
 
 
 /* Сделать активность кнопки Академии  */
+
+
+/* Выбор жилья  */
+
+.seach {
+  background-image: url("../img/catalog-fon.jpg");
+  background-repeat: no-repeat;
+  text-align: left;
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+
+.infrastructure-list {
+  list-style: none;
+}
+
+.infrastructure-item {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+
+}
+
+/* Блок сортировки */
+
+.sorting-title {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sorting-price {
+  color: var(--basic-blue);
+}
+
+.sorting-tipe {
+  opacity: 30%;
+}
+
+.sorting-tipe a:hover {
+  color: var(--basic-blue);
+  opacity: 100%;
+}
+
+.sorting-tipe a:active {
+  color: var(--basic-black);
+  opacity: 100%;
+
+}

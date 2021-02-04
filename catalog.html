@@ -1,38 +1,52 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Фавиконки -->
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/152.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body>
-  <header>
-    <nav>
-      <a href="index.html">
+<body class="page-body-catalog">
+  <header class="main-header">
+    <nav class="main-navigation">
+      <a class="">
         <img src="img/logo.svg" width="138" height="70" alt="Логотип город Седона">
       </a>
-      <ul>
-        <li><a href="#">Информация</a></li>
-        <li><a href="#">Фото и видео</a></li>
-        <li><a href="#">Карта штата</a></li>
-        <li><a>Гостиницы</a></li>
-      </ul>
+      <div class="main-navigation-wrapper">
+        <ul class="site-navigation">
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Фото и видео</a></li>
+          <li><a href="#">Карта штата</a></li>
+          <li class="site-navigation-current"><a href="catalog.html">Гостиницы</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
+
+
   <main>
     <!-- Блок Выбора жилья по параметрам -->
-    <section>
-
+    <section class="seach">
+      <!-- Это заголовок не нужен. Его можно убрать?  -->
       <h2>Выбор жилья</h2>
 
       <form method="get" action="https://echo.htmlacademy.ru">
 
         <!-- Выбор инфрастуктуры -->
-        <fieldset>
-          <legend>Инфраструктура:</legend>
-          <ul>
+        <fieldset class="infrastructure">
+          <legend class="infrastructure-item">Инфраструктура:</legend>
+          <ul class="infrastructure-list">
             <li>
               <input type="checkbox" name="swimming-pool" id="filter-swimming-pool" checked>
               <label for="filter-swimming-pool">Бассейн</label>
@@ -50,8 +64,8 @@
 
         <!-- Выбор типа жилья  -->
         <fieldset>
-          <legend>Тип жилья:</legend>
-          <ul>
+          <legend class="infrastructure-item">Тип жилья:</legend>
+          <ul class="infrastructure-list">
             <li>
               <input type="checkbox" name="hotel" id="filter-hotel" checked>
               <label for="filter-hotel">Гостиница</label>
@@ -69,7 +83,7 @@
 
         <!-- Выбор стоимости в сутки  -->
         <fieldset>
-          <legend>Стоимость в сутки (Р):</legend>
+          <legend class="infrastructure-item">Стоимость в сутки (Р):</legend>
           <!-- Здесь будет форма  -->
         </fieldset>
         <button type="submit">Показать</button>
@@ -79,20 +93,23 @@
 
     <!-- Блок сотрировки  -->
 
-    <p>Найдено:<span>3</span></p>
-    <p>Сортировка:</p>
-    <ul>
+    <p class="desc">Найдено:<span>3</span></p>
+    <p class="sorting-title">Сортировка:</p>
+    <ul class="infrastructure-list">
       <li>
-        <a href="#"> По цене</a>
+        <a class="sorting-price" href="#"> По цене</a>
       </li>
-      <li>
-        <a href="#"> По типу</a>
-      </li>
-      <li>
-        <a href="#"> По рейтингу</a>
-      </li>
+      <div class="sorting-tipe">
+        <li>
+          <a href="#"> По типу</a>
+        </li>
+        <li>
+          <a href="#"> По рейтингу</a>
+        </li>
+      </div>
+
     </ul>
-    <ul>
+    <ul class="infrastructure-list">
       <li>
         <a href="#">По возрастанию</a>
       </li>
@@ -104,7 +121,7 @@
 
     <!-- Блок результата поиска  -->
 
-    <ul>
+    <ul class="infrastructure-list">
       <!-- Карточка 1 -->
       <li>
         <img src="img/amara-resort.jpg" width="135" height="90" alt="Amara Resort & Spa">
