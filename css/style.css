@@ -1,24 +1,3 @@
-/*Fonts*/
-
-@font-face {
-  font-family: "PT Sans";
-  font-weight: 400;
-  font-style: normal;
-  src:
-    url("../fonts/PTSans.woff2") format("woff2"),
-    url("../fonts/PTSans.woff") format("woff");
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-weight: 700;
-  font-style: normal;
-  src:
-    url("../fonts/PTSans-Bold.woff2") format("woff2"),
-    url("../fonts/PTSans-Bold.woff") format("woff");
-}
-
-
 /*Variables*/
 
 :root {
@@ -27,50 +6,22 @@
   --basic-white: #FFFFFF;
   --basic-blue: #81B3D2;
   --basic-extra-light: #EEEEEE;
-  --footer: rgba(255, 255, 255, 0.9);
-
-
-  /* текст  */
-
-  /* основной текст и при состоянии покоя  */
+  --footer-color: rgba(255, 255, 255, 0.9);
   --basic-black: #000000;
-
+  --basic-black-opacity: rgba(0, 0, 0, 0.3);
   --thin-text: #333333;
   --transparent-white: rgba(255, 255, 255, 0.3);
-
-  /* рейтинг  */
   --rating-text: #666666;
-
-  /* активная страница  */
   --nav-test: #766357;
-
-
-
-  /* Кнопки*/
-
-  /* подробнее  */
-
   --more-hover: #669EC0;
   --more-focus: #5496BD;
-
-  /* забронировать и найти гостиницу */
-
   --book-hover: #604E43;
   --book-focus: #503E33;
-
-  /* поля формы ввода данных для поиска гостиницы  */
-
   --form-field-current: #F2F2F2;
   --form-field-hover: #EBEBEB;
-  --basic-white: #FFFFFF;
   --border-color: #E5E5E5;
-
-
-  /*  Логотип академии */
   --logo-current: #231F20;
-  --basic-blue: #81B3D2;
   --logo-focus: #BDBBBC;
-
 }
 
 /*Global*/
@@ -117,24 +68,18 @@ a {
 .main-navigation {
   font-size: 14px;
   line-height: 26px;
-
-  background-color: transparent;
 }
 
-.main-navigation-wrapper {
-  background-color: var(--basic-white);
-}
+.main-navigation-wrapper {}
 
 .site-navigation {
   list-style: none;
-
   font-weight: 700;
 }
 
 /* не работает этот класс. текущая ссылка не перекрашивается */
 .site-navigation-current {
   color: var(--nav-test);
-
 }
 
 
@@ -169,10 +114,7 @@ a {
   font-weight: 400;
 }
 
-.desc a {
-  color: var(--basic-black);
-  text-decoration: underline;
-}
+
 
 .desc-pic {
   background: var(--basic-blue) url("../img/background-photo.jpg");
@@ -269,7 +211,6 @@ a {
 
 .search-button-find:active {
   background-color: var(--more-focus);
-
 }
 
 .modal {
@@ -389,7 +330,6 @@ a {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
-
 }
 
 /* Блок сортировки */
@@ -397,14 +337,27 @@ a {
 .sorting-title {
   font-size: 12px;
   line-height: 18px;
+  color: var(--basic-blue);
+}
+
+.sorting-title a:hover {
+  color: var(--basic-blue);
+}
+
+.sorting-title a:active {
+  color: var(--basic-black);
 }
 
 .sorting-price {
   color: var(--basic-blue);
+  font-size: 12px;
+  line-height: 18px;
 }
 
-.sorting-tipe {
-  opacity: 30%;
+.sorting-tipe a {
+  color: var(--basic-black-opacity);
+  font-size: 12px;
+  line-height: 18px;
 }
 
 .sorting-tipe a:hover {
@@ -415,5 +368,18 @@ a {
 .sorting-tipe a:active {
   color: var(--basic-black);
   opacity: 100%;
+}
 
+.hotel-more a {
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.rating {
+  color: var(--rating-text);
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
 }
