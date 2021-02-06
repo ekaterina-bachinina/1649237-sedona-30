@@ -37,6 +37,12 @@
   color: var(--thin-text);
   text-transform: uppercase;
   text-align: center;
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows:
+    min-content 1fr min-content;
+  align-content: start;
 }
 
 .page-body-catalog {
@@ -63,19 +69,86 @@ a {
 }
 
 
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
 /* Навигация по сайту  */
 
+.main-header {
+
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
+
+  width: 1200px;
+  height: 56px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main-header ul {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
 .main-navigation {
+  display: grid;
   font-size: 14px;
   line-height: 26px;
 }
 
-.main-navigation-wrapper {}
+.main-header-logo {
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+
+  order: 1;
+  justify-self: center;
+}
+
+.main-navigation-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--basic-white);
+}
 
 .site-navigation {
   list-style: none;
   font-weight: 700;
+
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
+
+  margin: 0;
+  padding: 0;
 }
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  outline: 5px solid rgba(197, 32, 54, 0.3);
+  outline-offset: -5px;
+
+}
+
+.main-footer {
+  width: 1200px;
+  height: 120px;
+  margin: 0 auto;
+  padding: 0;
+
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+
+  background-color: var(--footer-color);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 
 /* не работает этот класс. текущая ссылка не перекрашивается */
 .site-navigation-current {
@@ -114,8 +187,6 @@ a {
   font-weight: 400;
 }
 
-
-
 .desc-pic {
   background: var(--basic-blue) url("../img/background-photo.jpg");
   background-position: top center;
@@ -123,6 +194,59 @@ a {
 }
 
 /*Список приемуществ*/
+
+.feature-navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feature-blok {
+  outline: 5px solid rgba(228, 131, 236, 0.3);
+  outline-offset: -5px;
+  margin: 0;
+  padding: 0;
+}
+
+.feature-foto-right {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.feature-foto {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.feature-colum {
+  list-style: none;
+  background-color: var(--basic-white);
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.feature-detail {
+  outline: 5px solid rgba(236, 233, 12, 0.932);
+  outline-offset: -5px;
+  margin: 0;
+  padding: 0;
+}
+
+.feature-detail ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.features {
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+  margin-bottom: 80px;
+  margin: 0;
+  padding: 0;
+}
 
 .feature-item-reversing {
   color: var(--basic-white);
@@ -152,6 +276,14 @@ a {
   color: var(--thin-text);
 }
 
+.feature-item-about-grey p {
+  margin: 0 40px;
+}
+
+.feature-item-about p {
+  margin: 0 40px;
+}
+
 .index-columns {
   background-color: var(--basic-extra-light);
 }
@@ -166,6 +298,16 @@ a {
   font-size: 30px;
   line-height: 24px;
   font-weight: 700;
+}
+
+.seach-form {
+  outline: 5px solid rgba(236, 233, 12, 0.932);
+  outline-offset: -5px;
+
+  padding: 0;
+  width: 568px;
+  height: 481px;
+  margin: 0 auto;
 }
 
 .search-content {
@@ -269,20 +411,44 @@ a {
 }
 
 .footer-social {
+
   text-align: center;
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
+
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  width: 150px;
+  height: 48px;
+
+  justify-self: center;
 }
 
+.footer-copyright {
+  outline: 5px solid rgba(255, 0, 255, 0.7);
+  outline-offset: -5px;
+
+  width: 198px;
+  height: 41px;
+  margin: 0;
+  justify-self: end;
+}
 
 /* Main footer */
 
-.footer-social {
-  text-align: center;
+.footer-contacts {
+  outline: 5px solid rgba(0, 255, 255, 0.7);
+  outline-offset: -5px;
 }
 
 .footer-social ul {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
 }
-
 
 /* social */
 
@@ -320,7 +486,6 @@ a {
   font-size: 14px;
   line-height: 21px;
 }
-
 
 .infrastructure-list {
   list-style: none;
