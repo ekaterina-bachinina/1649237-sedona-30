@@ -517,6 +517,13 @@ a {
   list-style: none;
 }
 
+.infrastructure-list li {
+  display: grid;
+  grid-template-columns: 135px 1fr 135px;
+}
+
+
+
 .infrastructure-item {
   font-size: 16px;
   line-height: 21px;
