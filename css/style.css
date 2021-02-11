@@ -2,7 +2,6 @@
 
 :root {
 
-  /* фон  */
   --basic-white: #FFFFFF;
   --basic-blue: #81B3D2;
   --basic-extra-light: #EEEEEE;
@@ -22,6 +21,8 @@
   --border-color: #E5E5E5;
   --logo-current: #231F20;
   --logo-focus: #BDBBBC;
+  --form-button: #A9A9A9;
+
 }
 
 /*Global*/
@@ -247,6 +248,8 @@ a {
   grid-column: 1 / -1
 }
 
+
+
 .feature-item-title {
   font-size: 21px;
   line-height: 21px;
@@ -258,7 +261,18 @@ a {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+
 }
+
+.column1 {
+  width: 400px;
+  padding: 47px;
+}
+
+
+
 
 .feature-item-about-white {
   font-size: 14px;
@@ -289,6 +303,7 @@ a {
   font-size: 30px;
   line-height: 24px;
   font-weight: 700;
+  padding: 58px;
 }
 
 .seach-form {
@@ -297,7 +312,7 @@ a {
 
   padding: 0;
   width: 568px;
-  min-height: 481px;
+
   margin: 0 auto;
 }
 
@@ -315,6 +330,8 @@ a {
   background-color: var(--nav-test);
   font-weight: 700;
   border: none;
+  padding: 30px;
+  width: 100%;
 }
 
 .search-button:hover {
@@ -336,6 +353,9 @@ a {
   text-transform: uppercase;
   font-weight: 700;
   border: none;
+  margin-top: 25px;
+  padding: 16px;
+  width: 100%;
 }
 
 .search-button-find:hover {
@@ -360,18 +380,98 @@ a {
   font-weight: 700;
 }
 
+.amount::placeholder {
+  color: var(--basic-black);
+}
+
+.appointment-form {
+  padding: 55px;
+}
+
+
+
 .appointment-item {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
+
+  margin: 0;
+  margin-bottom: 30px;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
 }
 
-/* как сделать, чтобы цвет не приглушался, а оставался чисто черным? */
+.appointment-item .box {
+  flex-grow: 1;
+}
+
+.appointment-item-label {
+
+  text-align: left;
+}
+
+.appointment-item-label:not(.def) {
+  min-width: 120px;
+
+}
+
+.appointment-item-label.def {
+  min-width: 70px;
+
+}
+
+
+.appointment-wrap {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.counter {
+  display: flex;
+  /* width: 115px; */
+}
+
+.counter-button {
+  background-color: var(--form-field-current);
+  border: none;
+  padding: 13px 17px;
+  display: flex;
+  align-items: center;
+}
+
+.counter-button svg {
+  fill: var(--form-button);
+}
+
+.counter-button:hover svg,
+.counter-button:focus svg {
+  fill: var(--basic-black);
+}
+
+.counter-button:active svg {
+  fill: var(--basic-blue);
+}
+
+.counter .amount {
+  width: 15px;
+}
+
 .box {
   background-color: var(--form-field-current);
   border: 2px solid var(--form-field-current);
   color: var(--basic-black);
   font-weight: 700;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.box::placeholder {
+  color: var(--basic-black);
 }
 
 .box:hover {
@@ -580,4 +680,27 @@ a {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+}
+
+/* Из инета. Убирает стрелочки прокрутки.  */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

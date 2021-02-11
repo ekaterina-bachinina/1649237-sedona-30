@@ -57,12 +57,17 @@
 
           <li class="feature-item-white">
             <div class="feature-item-about">
-              <h2 class="feature-item-white">Настоящий городок</h2>
+              <div class="column1">
+                <h2 class="feature-item-white">Настоящий городок</h2>
 
-              <p>— №1 —</p>
-              <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+                <p>— №1 —</p>
+                <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
+
+              <img src="img/real-town.jpg" width="800" height="256" alt="Настоящий городок">
+
             </div>
-            <img src="img/real-town.jpg" width="800" height="256" alt="Настоящий городок">
+
 
             <!-- пояснения приемущества 1 -->
 
@@ -97,11 +102,15 @@
           <!-- Приемущество 2 -->
 
           <li class="feature-item-white">
-            <img src="img/bridge.jpg" width="800" height="256" alt="Мост">
-            <div class="feature-item-about">
-              <h2 class="feature-item-white">Там есть Мост дьявола</h2>
-              <p>— №2 —</p>
-              <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+
+            <img src=" img/bridge.jpg" width="800" height="256" alt="Мост">
+            <div class="column1">
+              <div class="feature-item-about">
+                <h2 class="feature-item-white">Там есть Мост дьявола</h2>
+                <p>— №2 —</p>
+                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              </div>
+
             </div>
           </li>
 
@@ -144,42 +153,59 @@
           <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
 
             <p class="appointment-item">
-              <label for="appointment-date">Дата заезда:</label>
+              <label class="appointment-item-label" for="appointment-date">Дата заезда:</label>
               <input class="box" id="appointment-date" type="text" name="date" placeholder="24 апреля 2017">
             </p>
 
+
             <p class="appointment-item">
-              <label for="appointment-date-exit">Дата выезда:</label>
+              <label class="appointment-item-label" for="appointment-date-exit">Дата выезда:</label>
               <input class="box" id="appointment-date-exit" type="text" name="date" placeholder="4 июля 2017">
             </p>
 
-            <div class="appointment-item">
-              <label for="appointment-name">Взрослые</label>
-              <div>
-                <button type="button">
-                  <!-- Убавить  -->
-                  <span class="amount">-</span>
-                </button>
-                <input class="amount" id="appointment-name" type="number" name="name" placeholder="2">
-                <button type="button">
-                  <!-- Добавить  -->
-                  <span class="amount">+</span>
-                </button>
-              </div>
-            </div>
+            <div class="appointment-wrap">
+              <div class="appointment-item">
+                <label class="appointment-item-label" for="appointment-name">Взрослые</label>
+                <div class="counter">
+                  <button class="counter-button" type="button">
+                    <!-- Убавить  -->
+                    <svg width="12" height="3" viewBox="0 0 12 3" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="12" height="3" />
+                    </svg>
 
-            <div class="appointment-item">
-              <label for="appointment-name-child">Дети</label>
-              <div>
-                <button type="button">
-                  <!-- Убавить  -->
-                  <span class="amount">-</span>
-                </button>
-                <input class="amount" id="appointment-name-child" type="number" name="name" placeholder="0">
-                <button type="button">
-                  <!-- Добавить  -->
-                  <span class="amount">+</span>
-                </button>
+                  </button>
+                  <input class="amount" id="appointment-name" type="number" name="name" placeholder="2">
+                  <button class="counter-button" type="button">
+                    <!-- Добавить  -->
+                    <svg width="11" height="11" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" />
+                    </svg>
+
+                  </button>
+                </div>
+              </div>
+
+              <div class="appointment-item">
+                <label class="appointment-item-label def" for="appointment-name-child">Дети</label>
+                <div class="counter">
+                  <button class="counter-button" type="button">
+                    <!-- Убавить  -->
+                    <svg width="12" height="3" viewBox="0 0 12 3" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="12" height="3" />
+                    </svg>
+
+                  </button>
+                  <input class="amount" id="appointment-name-child" type="number" name="name" placeholder="0">
+                  <button class="counter-button" type="button">
+                    <!-- Добавить  -->
+                    <svg width="11" height="11" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" />
+                    </svg>
+
+                  </button>
+                </div>
               </div>
             </div>
             <button class="search-button-find" type="submit">Найти</button>
