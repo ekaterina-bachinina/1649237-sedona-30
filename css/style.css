@@ -264,6 +264,13 @@ a {
   display: flex;
   justify-content: space-between;
 
+
+}
+
+.reverse {
+  flex-direction: row-reverse;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 .column1 {
@@ -279,6 +286,7 @@ a {
   line-height: 21px;
   font-weight: 400;
   color: var(--thin-text);
+
 }
 
 .feature-item-about-white p {
@@ -303,7 +311,8 @@ a {
   font-size: 30px;
   line-height: 24px;
   font-weight: 700;
-  padding: 58px;
+  margin: 58px;
+
 }
 
 .seach-form {
@@ -320,6 +329,7 @@ a {
   font-size: 14px;
   line-height: 24px;
   color: var(--thin-text);
+
 }
 
 .search-button {
@@ -386,6 +396,7 @@ a {
 
 .appointment-form {
   padding: 55px;
+
 }
 
 
@@ -402,7 +413,18 @@ a {
   align-items: center;
 
   justify-content: space-between;
+
 }
+
+
+
+.appointment-item button {
+  height: 38px;
+}
+
+
+
+
 
 .appointment-item .box {
   flex-grow: 1;
@@ -438,7 +460,7 @@ a {
 .counter-button {
   background-color: var(--form-field-current);
   border: none;
-  padding: 13px 17px;
+  padding: 7px 9px;
   display: flex;
   align-items: center;
 }
@@ -682,7 +704,7 @@ a {
   font-weight: 400;
 }
 
-/* Из инета. Убирает стрелочки прокрутки.  */
+/* Из инета. Убирает стрелочки прокрутки.
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -703,4 +725,4 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
+} */
