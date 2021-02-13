@@ -91,17 +91,16 @@ a {
   min-height: 70px;
 }
 
-.main-header ul {}
-
-
-
 .main-header-logo {
   outline: 5px solid rgba(255, 0, 0, 0.3);
   outline-offset: -5px;
-
 }
 
-
+.main-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .site-navigation {
   list-style: none;
@@ -109,7 +108,6 @@ a {
 
   outline: 5px solid rgba(0, 255, 255, 0.3);
   outline-offset: -5px;
-
   margin: 0;
   padding: 0;
 }
@@ -245,10 +243,28 @@ a {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
-  grid-column: 1 / -1
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+
+}
+
+.feature-item-white h2 {
+  width: 122px;
+  margin: auto;
 }
 
 
+.column1 {
+  width: 400px;
+  padding-top: 57px;
+}
+
+.feature-pic {
+  width: 800px;
+}
 
 .feature-item-title {
   font-size: 21px;
@@ -261,10 +277,12 @@ a {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  display: flex;
-  justify-content: space-between;
+  width: 297px;
+  margin: auto;
+}
 
-
+.feature-pic img {
+  display: block;
 }
 
 .reverse {
@@ -273,20 +291,11 @@ a {
   justify-content: space-between; */
 }
 
-.column1 {
-  width: 400px;
-  padding: 47px;
-}
-
-
-
-
 .feature-item-about-white {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   color: var(--thin-text);
-
 }
 
 .feature-item-about-white p {
@@ -312,7 +321,6 @@ a {
   line-height: 24px;
   font-weight: 700;
   margin: 58px;
-
 }
 
 .seach-form {
@@ -396,10 +404,7 @@ a {
 
 .appointment-form {
   padding: 55px;
-
 }
-
-
 
 .appointment-item {
   font-size: 14px;
@@ -408,48 +413,36 @@ a {
 
   margin: 0;
   margin-bottom: 30px;
-
   display: flex;
   align-items: center;
-
   justify-content: space-between;
-
+  min-height: 38px;
 }
-
-
 
 .appointment-item button {
   height: 38px;
 }
-
-
-
-
 
 .appointment-item .box {
   flex-grow: 1;
 }
 
 .appointment-item-label {
-
   text-align: left;
 }
 
 .appointment-item-label:not(.def) {
   min-width: 120px;
-
 }
 
 .appointment-item-label.def {
   min-width: 70px;
-
 }
 
 
 .appointment-wrap {
   display: flex;
   justify-content: space-between;
-
 }
 
 .counter {
@@ -463,6 +456,7 @@ a {
   padding: 7px 9px;
   display: flex;
   align-items: center;
+  height: 38px;
 }
 
 .counter-button svg {
@@ -490,6 +484,8 @@ a {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 23px;
+  height: 38px;
+  box-sizing: border-box;
 }
 
 .box::placeholder {
