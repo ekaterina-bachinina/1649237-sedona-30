@@ -37,7 +37,7 @@
       <!-- Блок Выбора жилья по параметрам -->
       <section class="seach">
         <form method="get" action="https://echo.htmlacademy.ru">
-          <ul>
+          <ul class="seach-form-list">
             <li>
               <!-- Выбор инфрастуктуры -->
               <fieldset class="search-parameter">
@@ -79,11 +79,23 @@
                 </ul>
               </fieldset>
             </li>
-            <li>
+            <li class="search-parameter right">
               <!-- Выбор стоимости в сутки  -->
               <fieldset class="search-parameter">
                 <legend class="infrastructure-item">Стоимость в сутки (Р):</legend>
-                <!-- Здесь будет форма  -->
+                <div>
+                  <input type="text" name="min-price" id="min-price" placeholder="От 0">
+                  <label for="min-price">Минимальная стоимость</label>
+
+                  <input type="text" name="mах-price" id="mах-price" placeholder="до 3000">
+                  <label for="mах-price">Максимальная стоимость</label>
+                </div>
+                <div>
+                  <button type="button">От</button>
+                  <button type="button">до</button>
+
+                </div>
+
               </fieldset>
               <button type="submit">Показать</button>
             </li>
@@ -96,7 +108,7 @@
       <div class="find">
         <p class="desc">Найдено:<span>3</span></p>
         <p class="sorting-title">Сортировка:</p>
-        <ul class="infrastructure-list">
+        <ul class="infrastructure-list-block">
           <li>
             <a class="sorting-title" href="#"> По цене</a>
           </li>
@@ -104,25 +116,35 @@
           <li class="sorting-tipe">
             <a href="#"> По типу</a>
           </li>
-          <li>
+          <li class="sorting-tipe">
             <a href="#"> По рейтингу</a>
           </li>
         </ul>
 
         <!-- вставить треугольники и прописать классы -->
-        <ul class="infrastructure-list">
-          <li>
-            <a href="#">По возрастанию</a>
+        <ul class="infrastructure-list-block right">
+          <li class="sorting-tipe">
+            <a href="#">
+              <svg width="11" height="10" fill="none" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 0L0 10H11L5.5 0Z" />
+              </svg>
+            </a>
           </li>
-          <li>
-            <a href="#">По убыванию</a>
+
+          <li class="sorting-tipe">
+            <a href="#">
+              <svg width="11" height="10" fill="none" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 10L0 0H11" />
+              </svg>
+            </a>
           </li>
+
         </ul>
       </div>
 
       <!-- Блок результата поиска  -->
       <div class="infrastructure">
-        <ul class="infrastructure-list">
+        <ul class="infrastructure-list-card">
 
           <!-- Карточка 1 -->
           <li>

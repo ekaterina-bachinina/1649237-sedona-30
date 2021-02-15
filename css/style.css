@@ -162,6 +162,8 @@ a {
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-black);
+  margin: 0;
+  margin-right: 10px;
 }
 
 .desc-lead {
@@ -597,34 +599,53 @@ a {
 
   outline: 5px solid rgba(0, 255, 255, 0.7);
   outline-offset: -5px;
-
+  background-size: cover;
 
 }
 
-.seach ul {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 5px; */
+.seach-form-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 
 }
 
-.seach fieldset {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.infrastructure-list-block {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+
+
 }
+
+
 
 .find {
   outline: 5px solid rgba(160, 32, 211, 0.7);
   outline-offset: -5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+}
 
 
+.right {
+  margin-left: auto;
 }
 
 .search-parameter {
   outline: 5px solid rgba(125, 100, 182, 0.7);
   outline-offset: -5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+
 
 .infrastructure {
   outline: 5px solid rgba(223, 105, 111, 0.7);
@@ -632,10 +653,21 @@ a {
 }
 
 .infrastructure-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+
   list-style: none;
+  flex-direction: column;
 }
 
-.infrastructure-list li {
+.search-parameter-right {
+  margin-left: auto;
+}
+
+
+.infrastructure-list-card li {
   display: grid;
   grid-template-columns: 135px 1fr 135px;
 }
@@ -646,6 +678,8 @@ a {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Блок сортировки */
@@ -654,6 +688,7 @@ a {
   font-size: 12px;
   line-height: 18px;
   color: var(--basic-blue);
+  margin-left: 46px;
 }
 
 .sorting-title a:hover {
@@ -670,19 +705,41 @@ a {
   line-height: 18px;
 }
 
+.sorting-tipe {
+  margin-left: 30px;
+}
+
 .sorting-tipe a {
   color: var(--basic-black-opacity);
   font-size: 12px;
   line-height: 18px;
 }
 
+.sorting-tipe svg {
+  fill: var(--basic-black-opacity);
+
+}
+
 .sorting-tipe a:hover {
   color: var(--basic-blue);
   opacity: 100%;
+
+}
+
+
+.sorting-tipe svg:hover {
+  fill: var(--basic-blue);
+  opacity: 100%;
+
 }
 
 .sorting-tipe a:active {
   color: var(--basic-black);
+  opacity: 100%;
+}
+
+.sorting-tipe svg:active {
+  fill: var(--basic-black);
   opacity: 100%;
 }
 
