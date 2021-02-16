@@ -589,7 +589,7 @@ a {
 
 /* Выбор жилья  */
 
-.seach {
+.search {
   background-image: url("../img/catalog-fon.jpg");
   background-repeat: no-repeat;
   text-align: left;
@@ -601,55 +601,28 @@ a {
   outline-offset: -5px;
   background-size: cover;
 
+
 }
 
-.seach-form-list {
-  list-style: none;
-  padding: 0;
+.search-modul {
+  display: flex;
+
   margin: 0;
-  display: flex;
-
-}
-
-.infrastructure-list-block {
-  list-style: none;
   padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-
-
-}
-
-
-
-.find {
-  outline: 5px solid rgba(160, 32, 211, 0.7);
-  outline-offset: -5px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 10px;
-}
-
-
-.right {
-  margin-left: auto;
 }
 
 .search-parameter {
   outline: 5px solid rgba(125, 100, 182, 0.7);
   outline-offset: -5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: fit-content;
 }
 
-
-
-.infrastructure {
-  outline: 5px solid rgba(223, 105, 111, 0.7);
-  outline-offset: -5px;
+.infrastructure-item {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .infrastructure-list {
@@ -661,6 +634,44 @@ a {
   list-style: none;
   flex-direction: column;
 }
+
+.find {
+  outline: 5px solid rgba(160, 32, 211, 0.7);
+  outline-offset: -5px;
+  display: flex;
+
+  align-items: center;
+  padding: 10px;
+}
+
+
+.infrastructure-list-block {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+
+.right {
+  margin-left: auto;
+}
+
+
+
+
+
+.infrastructure {
+  outline: 5px solid rgba(223, 105, 111, 0.7);
+  outline-offset: -5px;
+}
+
+
 
 .search-parameter-right {
   margin-left: auto;
@@ -674,13 +685,7 @@ a {
 
 
 
-.infrastructure-item {
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 700;
-  display: flex;
-  flex-wrap: wrap;
-}
+
 
 /* Блок сортировки */
 
@@ -705,40 +710,40 @@ a {
   line-height: 18px;
 }
 
-.sorting-tipe {
+.sorting-type {
   margin-left: 30px;
 }
 
-.sorting-tipe a {
+.sorting-type a {
   color: var(--basic-black-opacity);
   font-size: 12px;
   line-height: 18px;
 }
 
-.sorting-tipe svg {
+.sorting-type svg {
   fill: var(--basic-black-opacity);
 
 }
 
-.sorting-tipe a:hover {
+.sorting-type a:hover {
   color: var(--basic-blue);
   opacity: 100%;
 
 }
 
 
-.sorting-tipe svg:hover {
+.sorting-type svg:hover {
   fill: var(--basic-blue);
   opacity: 100%;
 
 }
 
-.sorting-tipe a:active {
+.sorting-type a:active {
   color: var(--basic-black);
   opacity: 100%;
 }
 
-.sorting-tipe svg:active {
+.sorting-type svg:active {
   fill: var(--basic-black);
   opacity: 100%;
 }
