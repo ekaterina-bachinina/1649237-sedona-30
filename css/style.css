@@ -103,11 +103,7 @@ a {
   margin: 0;
   padding: 0;
   display: flex;
-
-
 }
-
-
 
 .item {
   flex-basis: content;
@@ -115,12 +111,12 @@ a {
 }
 
 .item:nth-child(1) {
-  padding-left: 72px;
+
   text-align: left;
 }
 
 .item:nth-child(2) {
-  margin-left: auto;
+
   text-align: left;
 }
 
@@ -130,7 +126,7 @@ a {
 }
 
 .item:nth-child(4) {
-  padding-left: 72px;
+
   text-align: right;
 }
 
@@ -162,20 +158,21 @@ a {
 .main-header-logo {
   position: absolute;
   z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 
 .main-navigation {
   position: relative;
-  display: flex;
-  justify-content: center;
-
+  padding: 0 72px;
 }
 
 
 .container {
   width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
 
@@ -185,7 +182,16 @@ a {
   background-color: var(--footer-color);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
 }
+
+.main-footer.fluid {
+
+  position: absolute;
+  bottom: 0;
+}
+
+
 
 
 /* не работает этот класс. текущая ссылка не перекрашивается */
@@ -203,6 +209,7 @@ a {
   font-weight: 700;
   color: var(--basic-black);
   margin: 0;
+
 }
 
 .desc-lead {
@@ -652,6 +659,8 @@ a {
   grid-template-columns: repeat(3, 1fr);
 }
 
+
+
 .footer-contacts {
   width: 400px;
   margin: 0;
@@ -659,12 +668,9 @@ a {
 
 .footer-contacts a {
   color: var(--basic-black);
-  text-decoration: underline;
 }
 
 .footer-social {
-  width: 400px;
-  justify-self: center;
   text-align: center;
 }
 
@@ -698,13 +704,16 @@ a {
 
 .social-button:active {
   background-color: var(--more-focus);
-  /* тут надо еще поменять цвет пиктограммы. Как? */
 }
 
 .social-button svg {
   fill: var(--basic-white);
 }
 
+
+.social-button:active path {
+  fill: var(--transparent-white);
+}
 
 .footer-copyright {
 
@@ -722,33 +731,47 @@ a {
 
 /* Выбор жилья  */
 
-.search {
+.filters {
   background-image: url("../img/catalog-fon.jpg");
   background-repeat: no-repeat;
   text-align: left;
   color: var(--basic-white);
   font-size: 14px;
   line-height: 21px;
-
-  outline: 5px solid rgba(0, 255, 255, 0.7);
-  outline-offset: -5px;
   background-size: cover;
-
-
 }
 
+
+
+.filters fieldset {
+  padding: 0;
+  margin: 0;
+
+  border: none;
+}
+
+
+
 .search-modul {
-  display: flex;
 
   margin: 0;
-  padding: 0;
+  padding: 26px 72px;
+  display: flex;
+}
+
+.search-parameter:first-of-type {
+  margin-right: 119px;
 }
 
 .search-parameter {
-  outline: 5px solid rgba(125, 100, 182, 0.7);
-  outline-offset: -5px;
   width: fit-content;
+  display: flex;
+  flex-direction: column;
+
 }
+
+
+
 
 .infrastructure-item {
   font-size: 16px;
@@ -756,6 +779,7 @@ a {
   font-weight: 700;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 25px;
 }
 
 .infrastructure-list {
@@ -772,11 +796,15 @@ a {
   outline: 5px solid rgba(160, 32, 211, 0.7);
   outline-offset: -5px;
   display: flex;
-
+  justify-content: flex-start;
   align-items: center;
-  padding: 10px;
+  padding: 29px 73px;
 }
 
+.find span {
+
+  padding-left: 5px;
+}
 
 .infrastructure-list-block {
   list-style: none;
@@ -787,21 +815,163 @@ a {
 }
 
 
+.filter-option {
+  margin-bottom: 24px;
+  padding-left: 35px;
+}
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-checkbox+label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #FFFFFF;
+  border-radius: 10%;
+
+}
+
+.filter-input-checkbox:checked+label::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -33px;
+  width: 22px;
+  height: 16px;
+  background-image: url("../img/cross.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
 
 
+/* Менять цвет на не прозрачность */
+.filter-input-checkbox:disabled+label::before,
+.filter-input-checkbox:disabled+label::after {
+  opacity: 0.3;
+}
 
-
+.filters .right,
 .right {
   margin-left: auto;
 }
 
 
+.rectangle {
+  width: 224px;
+  height: 36px;
+  border: 2px solid #FFFFFF;
+  border-radius: 2%;
+  margin-bottom: 20px;
+  display: flex;
+  width: auto;
+  background-image:
+    url("../img/line-vert.svg");
+  background-position: center, 0 0;
+  background-repeat: no-repeat, repeat;
+  justify-content: space-between;
+}
+
+
+
+.rectangle-text {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+
+}
+
+
+
+.c-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  border-radius: 0;
+  font-size: 0;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url(../img/filter-button.svg),
+    center center no-repeat;
+  border-radius: 50%;
+}
+
+.search-parameter-price {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+}
+
+.stars-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.horizontal-line-right {
+  width: 220px;
+  background: var(--transparent-white);
+  border: none;
+  height: 2px;
+  position: relative;
+  text-align: right;
+  float: right;
+
+}
+
+.horizontal-line {
+  width: 158px;
+  text-align: right;
+  float: right;
+  background: var(--basic-white);
+  border: none;
+  height: 2px;
+  position: relative;
+
+}
+
+
+.search-parameter-button {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 137px;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-weight: 400;
+  border: 2px;
+  border: #FFFFFF;
+  bottom: 0;
+  padding: 7px;
+  width: 137px;
+  background: transparent;
+  align-items: center;
+  color: var(--basic-white);
+  outline: 2px solid #FFFFFF;
+  border-radius: 5px;
+
+}
 
 
 
 .infrastructure {
-  outline: 5px solid rgba(223, 105, 111, 0.7);
-  outline-offset: -5px;
+  padding: 30px 73px;
+
 }
 
 
@@ -810,13 +980,26 @@ a {
   margin-left: auto;
 }
 
+.infrastructure-list-card {
+  margin: 0;
+  padding: 0;
+
+}
 
 .infrastructure-list-card li {
   display: grid;
   grid-template-columns: 135px 1fr 135px;
 }
 
+.infrastructure-list-card-pic {
+  width: 135px;
+}
 
+.card-description {
+  padding-left: 29px;
+  display: flex;
+  flex-direction: column;
+}
 
 
 
@@ -825,7 +1008,7 @@ a {
 .sorting-title {
   font-size: 12px;
   line-height: 18px;
-  color: var(--basic-blue);
+  color: var(--basic-black);
   margin-left: 46px;
 }
 
@@ -881,6 +1064,53 @@ a {
   opacity: 100%;
 }
 
+.hotel-more {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: center;
+
+  flex-wrap: wrap;
+}
+
+.hotel-more-column {
+  padding-top: 8px;
+  text-align: left;
+}
+
+.hotel-more-column .button {
+  margin-top: 8px;
+}
+
+
+
+.hotel-more button {
+
+  display: inline-block;
+  margin-right: 16px;
+  padding: 3px 6px;
+  font: inherit;
+  text-align: center;
+  color: var(--basic-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--basic-blue);
+  border: none;
+  bottom: 0;
+  font-size: 14px;
+  line-height: 21px;
+  width: 110px;
+}
+
+.hotel-more .button-booking {
+  background-color: var(--nav-test);
+  width: 146px;
+}
+
+.hotel-more p {
+  margin: 0;
+}
+
 .hotel-more a {
   color: var(--basic-white);
   font-size: 14px;
@@ -893,27 +1123,18 @@ a {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-}
-
-/* Из инета. Убирает стрелочки прокрутки.
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
   margin: 0;
+  padding-top: 3px;
+  text-align: center;
+  display: block;
+  background-color: var(--form-field-current);
+
+  margin-top: 40px;
+  padding: 3px 14px;
+
 }
 
-input[type="number"] {
-  -moz-appearance: textfield;
-}
 
-input[type="number"]:hover,
-input[type="number"]:focus {
-  -moz-appearance: number-input;
+.stars {
+  Align-items: flex-end;
 }
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-} */
