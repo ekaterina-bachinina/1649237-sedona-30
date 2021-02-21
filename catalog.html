@@ -88,36 +88,41 @@
 
 
             <!-- Выбор стоимости в сутки  -->
-            <fieldset class="search-parameter right">
-              <legend class="infrastructure-item">Стоимость в сутки (Р):</legend>
-              <div class="rectangle">
+            <div class="search-parameter right">
+              <fieldset>
+                <legend class="infrastructure-item">Стоимость в сутки (Р):</legend>
+                <div class="rectangle">
 
-                <input class="rectangle-text" type="text" name="min-price" id="min-price" value="от 0">
-                <!-- <label for="min-price">От 0</label> -->
+                  <input class="rectangle-text" type="text" name="min-price" id="min-price" value="от 0">
+                  <!-- <label for="min-price">От 0</label> -->
 
-                <input class="rectangle-text" type="text" name="mах-price" id="mах-price" value="до 3000">
-                <!-- <label class="rectangle-text" for="min-price">До 3000</label> -->
+                  <input class="rectangle-text" type="text" name="mах-price" id="mах-price" value="до 3000">
+                  <!-- <label class="rectangle-text" for="min-price">До 3000</label> -->
 
-              </div>
-
-              <!-- <div> -->
+                </div>
 
 
-              <!-- <div class="search-parameter-price">
+
+
+                <!-- <div class="search-parameter-price">
                   <button class="c-button" type="button"><span>От</span></button>
                   <button class="c-button" type="button"><span>До</span></button>
 
                   <hr class="horizontal-line-right">
                   <hr class="horizontal-line">
+                </div>-->
+
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
                 </div>
-              </div> -->
 
-              <div>
-
-              </div>
-
+              </fieldset>
               <button class="search-parameter-button" type="submit">Показать</button>
-            </fieldset>
+            </div>
           </div>
         </form>
       </section>
