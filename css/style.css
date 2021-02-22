@@ -24,7 +24,7 @@
   --form-button: #A9A9A9;
   --shadow: rgb(171, 171, 171 0.3);
   --toggle: #ababab;
-
+  --disabled-color: #6A6A6A;
 }
 
 /*Global*/
@@ -91,6 +91,15 @@ a {
   overflow: hidden;
 }
 
+
+hr {
+  background: var(--border-color);
+  border: 0;
+  height: 1px;
+  margin: 0;
+
+}
+
 /* Grid */
 
 .page {
@@ -134,6 +143,7 @@ a {
 
 
 
+
 .site-navigation a {
   color: var(--basic-black);
   display: block;
@@ -151,6 +161,15 @@ a {
   opacity: 0.3;
 }
 
+
+.site-navigation-current {
+  position: relative;
+
+}
+
+.site-navigation-current a {
+  color: var(--nav-test);
+}
 
 
 /* .main-header {
@@ -195,11 +214,6 @@ a {
 
 
 
-
-/* не работает этот класс. текущая ссылка не перекрашивается */
-.site-navigation-current {
-  color: var(--nav-test);
-}
 
 
 
@@ -756,17 +770,9 @@ a {
   display: flex;
 }
 
-.search-parameter:first-of-type {
-  margin-right: 119px;
+.search-parameter:not(.right) {
+  margin-right: 120px;
 }
-
-.search-parameter {
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-
-}
-
 
 
 
@@ -790,8 +796,7 @@ a {
 }
 
 .find {
-  outline: 5px solid rgba(160, 32, 211, 0.7);
-  outline-offset: -5px;
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -849,10 +854,32 @@ a {
 }
 
 
-/* Менять цвет на не прозрачность */
-.filter-input-checkbox:disabled+label::before,
+.filter-input-checkbox:disabled+label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--disabled-color);
+  border-radius: 10%;
+
+  background-image: url("../img/cross-disable.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .filter-input-checkbox:disabled+label::after {
-  opacity: 0.3;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -33px;
+  width: 22px;
+  height: 16px;
+
+  background-image: url("../img/cross-disable.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .filters .right,
@@ -876,6 +903,11 @@ a {
   justify-content: space-between;
 }
 
+.rectangle input {
+  font-size: 14px;
+  line-height: 21px;
+
+}
 
 
 .rectangle-text {
@@ -890,8 +922,32 @@ a {
 
 }
 
+.rectangle-input {
+  outline: none;
+  width: 50px;
+
+}
+
+.rectangle-item {
+  position: relative;
+  display: flex;
+}
+
+.rectangle-label {
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  /* position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 50px; */
+}
+
 .range-controls {
   position: relative;
+  height: 20px;
+  margin-bottom: 5px;
+
 }
 
 .range-controls .scale {
@@ -915,8 +971,13 @@ a {
   background-color: var(--toggle);
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 var(--shadow);
-  top: 31px;
+  top: -10px;
   left: 0;
+  cursor: pointer;
+}
+
+.range-controls .toggle-max {
+  left: 233px;
 }
 
 /* .c-button {
@@ -994,11 +1055,9 @@ a {
 
 
 .infrastructure {
-  padding: 30px 73px;
+  padding: 0px 73px;
 
 }
-
-
 
 .search-parameter-right {
   margin-left: auto;
@@ -1008,11 +1067,15 @@ a {
   margin: 0;
   padding: 0;
 
+
 }
 
 .infrastructure-list-card li {
   display: grid;
   grid-template-columns: 135px 1fr 135px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
 }
 
 .infrastructure-list-card-pic {
@@ -1051,14 +1114,50 @@ a {
 }
 
 .sorting-type {
+  margin-left: 10px;
+}
+
+.sorting-type-text {
   margin-left: 30px;
 }
 
-.sorting-type a {
+
+
+
+
+.sorting-type-text a {
   color: var(--basic-black-opacity);
   font-size: 12px;
   line-height: 18px;
+  border-bottom: 1px dashed var(--basic-blue);
 }
+
+.sorting-type-text a:hover {
+  color: var(--basic-blue);
+  font-size: 12px;
+  line-height: 18px;
+  border-bottom: 1px dashed var(--basic-blue);
+}
+
+.sorting-type-text a:active {
+  color: var(--basic-black);
+  font-size: 12px;
+  line-height: 18px;
+  border-bottom: none;
+}
+
+
+/* Сделать стиль для кнопки "выбранный" */
+/* .sorting-type-text a: {
+  color: var(--basic-blue);
+  font-size: 12px;
+  line-height: 18px;
+  border-bottom: none;
+} */
+
+
+
+
 
 .sorting-type svg {
   fill: var(--basic-black-opacity);
@@ -1066,25 +1165,25 @@ a {
 }
 
 .sorting-type a:hover {
-  color: var(--basic-blue);
+  color: var(--basic-black);
   opacity: 100%;
 
 }
 
 
 .sorting-type svg:hover {
-  fill: var(--basic-blue);
+  fill: var(--basic-black);
   opacity: 100%;
 
 }
 
 .sorting-type a:active {
-  color: var(--basic-black);
+  color: var(--basic-blue);
   opacity: 100%;
 }
 
 .sorting-type svg:active {
-  fill: var(--basic-black);
+  fill: var(--basic-blue);
   opacity: 100%;
 }
 
@@ -1104,6 +1203,20 @@ a {
 
 .hotel-more-column .button {
   margin-top: 8px;
+  outline: none;
+
+}
+
+.hotel-more-column .button:hover {
+  margin-top: 8px;
+  background-color: var(--more-hover);
+  color: var(--basic-white);
+}
+
+.hotel-more-column .button:active {
+  margin-top: 8px;
+  background-color: var(--more-hover);
+  color: var(--transparent-white);
 }
 
 
@@ -1129,6 +1242,10 @@ a {
 .hotel-more .button-booking {
   background-color: var(--nav-test);
   width: 146px;
+}
+
+.hotel-more .button-booking:hover {
+  background-color: var(--book-hover);
 }
 
 .hotel-more p {
