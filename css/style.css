@@ -770,7 +770,7 @@ a {
 }
 
 .rectangle-input {
-  outline: none;
+
   width: 50px;
 }
 
@@ -835,9 +835,9 @@ a {
   border: 2px solid #FFFFFF;
   color: var(--basic-white);
   border-radius: 2px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  display: block;
+
+  padding: 5px 34px;
 }
 
 .search-parameter-button:hover {
@@ -1033,16 +1033,21 @@ a {
 
 .hotel-more-column .button:active {
   margin-top: 8px;
-  background-color: var(--more-hover);
+  background-color: var(--more-focus);
   color: var(--transparent-white);
 }
 
-.hotel-more .button-booking {
+.hotel-more-column .button-booking {
   background-color: var(--nav-test);
 }
 
-.hotel-more .button-booking:hover {
+.hotel-more-column .button-booking:hover {
   background-color: var(--book-hover);
+}
+
+.hotel-more-column .button-booking:active {
+  background-color: var(--book-focus);
+  color: var(--transparent-white);
 }
 
 .hotel-more p {
