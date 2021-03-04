@@ -159,7 +159,16 @@ a {
   font-weight: 700;
   color: var(--basic-black);
   margin: 0;
-  padding-bottom: 51px;
+  margin: 45px 340px 43px;
+}
+
+.desc-block {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-black);
+  margin-bottom: 52px;
+
 }
 
 .desc-pic {
@@ -187,8 +196,8 @@ a {
 /* Блок приемуществ */
 
 .desc h1 {
-  padding-top: 44px;
-  padding-bottom: 46px;
+  margin-top: 44px;
+
   margin-left: auto;
   margin-right: auto;
   width: 470px;
@@ -200,7 +209,7 @@ a {
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
-  margin: 0px 0px 0px;
+  margin: 0px 340px;
 }
 
 .features {
@@ -306,7 +315,7 @@ a {
 
 .feature-item-about-white p {
   margin: 0 51px;
-  padding-top: 9px;
+  padding-top: 11px;
 }
 
 .feature-item-about {
@@ -314,8 +323,8 @@ a {
   line-height: 21px;
   font-weight: 400;
   margin: 0px;
-  margin-left: -3px;
-  padding-top: 27px;
+
+  margin-top: 27px;
 }
 
 .reverse {
@@ -363,8 +372,8 @@ a {
 
 .search-content-desc {
   padding: 21px 320px;
-  margin-bottom: 23px;
-  padding-left: 318px;
+  margin: 12px 0 23px;
+
 
 }
 
@@ -450,9 +459,9 @@ a {
   border: 2px solid var(--form-field-current);
   color: var(--basic-black);
   font-weight: 700;
-  padding: 5px 6px;
+  padding: 5px 11px 8px;
   font-size: 14px;
-  line-height: 23px;
+  line-height: 26px;
   height: 38px;
   box-sizing: border-box;
 }
@@ -517,7 +526,7 @@ a {
 
 .appointment-item .counter-button-count {
   height: 38px;
-  padding-right: 10px;
+  padding-right: 6px;
 }
 
 .appointment-wrap {
@@ -580,13 +589,13 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
   padding-left: 36px;
   padding-right: 60px;
-  padding-top: 9px;
+  /* padding-top: 9px; */
 }
 
 .main-footer.fluid {
   position: absolute;
   bottom: 0;
-
+  margin-bottom: 7px;
 }
 
 
@@ -597,16 +606,26 @@ a {
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-black);
+  margin-top: 23px;
+}
+
+.footer-contacts p {
+  color: var(--basic-black);
+  padding-bottom: 10px;
+  margin: 0;
 }
 
 .footer-contacts a {
   color: var(--basic-black);
+
 }
 
 .footer-social {
   text-align: center;
   display: flex;
-  align-items: center;
+  padding: 21px 49px;
+
+
 }
 
 
@@ -616,8 +635,9 @@ a {
   width: 150px;
   justify-content: space-between;
   list-style: none;
-  margin-left: 90px;
-  padding: 0px;
+  /* margin-left: 90px;
+  padding: 0px; */
+
 }
 
 .social-button {
@@ -650,12 +670,20 @@ a {
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-top: 2px;
+  /* align-items: center; */
+
 }
 
+.footer-copyright b {
+
+  padding-top: 37px;
+}
+
+
+
 .footer-copyright .button {
-  padding-left: 5px;
+  padding-left: 7px;
+  padding-top: 25px;
 }
 
 .button .copy-logo svg {
