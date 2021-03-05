@@ -84,8 +84,8 @@ a {
 
 .main-navigation {
   position: relative;
-  padding: 0 72px;
-  padding-right: 72px;
+  padding: 0 70px 0 73px;
+
 }
 
 .main-header-logo {
@@ -108,7 +108,7 @@ a {
 
 .item {
   width: 228px;
-  padding-top: 18px;
+  padding-top: 17px;
   padding-bottom: 17px;
 }
 
@@ -158,8 +158,7 @@ a {
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-black);
-  margin: 0;
-  margin: 45px 340px 43px;
+  margin: 43px 340px 43px;
 }
 
 .desc-block {
@@ -181,7 +180,7 @@ a {
 }
 
 .desc-pic img {
-  margin-top: 77px;
+  margin-top: 78px;
 }
 
 .desc-pic::after {
@@ -240,13 +239,14 @@ a {
 
 .column1 {
   width: 400px;
-  padding: 48px;
+  padding: 47px;
   box-sizing: border-box;
 }
 
 .column1 .feature-item-white {
   margin: auto;
   text-align: center;
+
 }
 
 .feature-pic {
@@ -258,7 +258,7 @@ a {
   list-style: none;
   background-color: var(--basic-white);
   margin: 0;
-  padding-top: 60px;
+  padding-top: 59px;
   padding-left: 0px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -296,8 +296,8 @@ a {
 }
 
 .feature-item-title {
-  /* padding-top: 71px;
-  padding-bottom: 82px; */
+
+  padding-bottom: 74px;
   background: var(--basic-white) url("../img/meal.svg");
   background-position: top center;
   background-repeat: no-repeat;
@@ -311,11 +311,13 @@ a {
   font-weight: 400;
   color: var(--thin-text);
   padding-top: 22px;
+  padding-bottom: 8px;
+
 }
 
 .feature-item-about-white p {
   margin: 0 51px;
-  padding-top: 11px;
+  padding-top: 8px;
 }
 
 .feature-item-about {
@@ -324,7 +326,7 @@ a {
   font-weight: 400;
   margin: 0px;
 
-  margin-top: 27px;
+  margin-top: 25px;
 }
 
 .reverse {
@@ -340,11 +342,11 @@ a {
   padding: 0 71px;
   padding-top: 49px;
   margin: 0;
-  padding-bottom: 21px;
+  padding-bottom: 14px;
 }
 
 .feature-number {
-  margin: 27px 0 25px;
+  margin: 25px 0 23px;
 }
 
 .feature-item-title-last {
@@ -357,7 +359,7 @@ a {
   font-size: 14px;
   line-height: 24px;
   color: var(--thin-text);
-  padding-top: 58px;
+  padding-top: 61px;
 
 
 }
@@ -371,8 +373,8 @@ a {
 }
 
 .search-content-desc {
-  padding: 21px 320px;
-  margin: 12px 0 23px;
+  padding: 0px 320px;
+  margin: 34px 0 43px;
 
 
 }
@@ -426,7 +428,7 @@ a {
   font-weight: 700;
   margin: 0;
 
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -559,7 +561,7 @@ a {
   text-transform: uppercase;
   font-weight: 700;
   border: none;
-  margin-top: 23px;
+  margin-top: 26px;
   padding: 16px;
   width: 100%;
 }
