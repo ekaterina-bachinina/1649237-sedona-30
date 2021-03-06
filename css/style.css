@@ -239,7 +239,7 @@ a {
 
 .column1 {
   width: 400px;
-  padding: 47px;
+  padding: 48px;
   box-sizing: border-box;
 }
 
@@ -339,10 +339,10 @@ a {
 
 .index-columns {
   background-color: var(--basic-extra-light);
-  padding: 0 71px;
-  padding-top: 49px;
+  padding: 0 69px;
+  padding-top: 47px;
   margin: 0;
-  padding-bottom: 14px;
+  padding-bottom: 42px;
 }
 
 .feature-number {
@@ -359,7 +359,7 @@ a {
   font-size: 14px;
   line-height: 24px;
   color: var(--thin-text);
-  padding-top: 61px;
+  padding-top: 57px;
 
 
 }
@@ -374,7 +374,7 @@ a {
 
 .search-content-desc {
   padding: 0px 320px;
-  margin: 34px 0 43px;
+  margin: 32px 0 43px;
 
 
 }
@@ -440,6 +440,7 @@ a {
 
 .appointment-item .box {
   flex-grow: 1;
+  text-transform: uppercase;
 }
 
 .appointment-item-label {
@@ -452,7 +453,7 @@ a {
 }
 
 .appointment-item-label.def {
-  min-width: 70px;
+  min-width: 64px;
 
 }
 
@@ -461,7 +462,7 @@ a {
   border: 2px solid var(--form-field-current);
   color: var(--basic-black);
   font-weight: 700;
-  padding: 5px 11px 8px;
+  padding: 7px 11px 8px;
   font-size: 14px;
   line-height: 26px;
   height: 38px;
@@ -507,8 +508,9 @@ a {
 
 .counter .amount {
   width: 15px;
-  padding-left: 19px;
-  padding-right: 17px;
+  padding-left: 11px;
+  padding-right: 8px;
+}
 }
 
 .amount:hover {
@@ -528,7 +530,12 @@ a {
 
 .appointment-item .counter-button-count {
   height: 38px;
-  padding-right: 6px;
+  width: 38px;
+  padding-right: 5px;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .appointment-wrap {
@@ -625,7 +632,7 @@ a {
 .footer-social {
   text-align: center;
   display: flex;
-  padding: 21px 49px;
+  padding: 22px 49px;
 
 
 }
