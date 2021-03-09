@@ -1,4 +1,4 @@
-/*Variables*/
+/*Переменные*/
 
 :root {
 
@@ -27,7 +27,7 @@
   --disabled-color: #6A6A6A;
 }
 
-/*Global*/
+/*Основные*/
 
 .page {
   height: 100%;
@@ -85,7 +85,6 @@ a {
 .main-navigation {
   position: relative;
   padding: 0 70px 0 73px;
-
 }
 
 .main-header-logo {
@@ -167,7 +166,6 @@ a {
   font-weight: 700;
   color: var(--basic-black);
   margin-bottom: 52px;
-
 }
 
 .desc-pic {
@@ -196,7 +194,6 @@ a {
 
 .desc h1 {
   margin-top: 44px;
-
   margin-left: auto;
   margin-right: auto;
   width: 470px;
@@ -246,7 +243,6 @@ a {
 .column1 .feature-item-white {
   margin: auto;
   text-align: center;
-
 }
 
 .feature-pic {
@@ -274,20 +270,15 @@ a {
 }
 
 .feature-item-title:last-child {
-  /* padding-top: 55px;
-  padding-bottom: 81px; */
   background: var(--basic-white) url("../img/souvenirs.svg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 75px 72px;
   height: auto;
   width: auto;
-
 }
 
 .feature-item-title:first-child {
-  /* padding-top: 71px;
-  padding-bottom: 82px; */
   background: var(--basic-white) url("../img/housing.svg");
   background-position: top center;
   background-repeat: no-repeat;
@@ -312,7 +303,6 @@ a {
   color: var(--thin-text);
   padding-top: 22px;
   padding-bottom: 8px;
-
 }
 
 .feature-item-about-white p {
@@ -325,7 +315,6 @@ a {
   line-height: 21px;
   font-weight: 400;
   margin: 0px;
-
   margin-top: 25px;
 }
 
@@ -360,8 +349,6 @@ a {
   line-height: 24px;
   color: var(--thin-text);
   padding-top: 57px;
-
-
 }
 
 .question {
@@ -375,8 +362,6 @@ a {
 .search-content-desc {
   padding: 0px 320px;
   margin: 32px 0 43px;
-
-
 }
 
 .seach-form {
@@ -427,7 +412,6 @@ a {
   line-height: 26px;
   font-weight: 700;
   margin: 0;
-
   margin-bottom: 29px;
   display: flex;
   align-items: center;
@@ -454,7 +438,6 @@ a {
 
 .appointment-item-label.def {
   min-width: 64px;
-
 }
 
 .box {
@@ -511,7 +494,6 @@ a {
   padding-left: 11px;
   padding-right: 8px;
 }
-}
 
 .amount:hover {
   background-color: var(--form-field-hover);
@@ -525,7 +507,6 @@ a {
 
 .appointment-item button {
   height: 38px;
-
 }
 
 .appointment-item .counter-button-count {
@@ -593,15 +574,12 @@ a {
   background-color: var(--more-focus);
 }
 
-
 /* Футер */
-
 
 .main-footer .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-
 
 .main-footer {
   min-height: 120px;
@@ -610,7 +588,6 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
   padding-left: 36px;
   padding-right: 60px;
-  /* padding-top: 9px; */
 }
 
 .main-footer.fluid {
@@ -638,15 +615,12 @@ a {
 
 .footer-contacts a {
   color: var(--basic-black);
-
 }
 
 .footer-social {
   text-align: center;
   display: flex;
   padding: 22px 49px;
-
-
 }
 
 
@@ -656,9 +630,6 @@ a {
   width: 150px;
   justify-content: space-between;
   list-style: none;
-  /* margin-left: 90px;
-  padding: 0px; */
-
 }
 
 .social-button {
@@ -691,16 +662,11 @@ a {
   text-align: center;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-
 }
 
 .footer-copyright b {
-
   padding-top: 37px;
 }
-
-
 
 .footer-copyright .button {
   padding-left: 7px;
@@ -711,7 +677,6 @@ a {
   fill: var(--logo-current)
 }
 
-
 .button:hover svg {
   fill: var(--basic-blue);
 }
@@ -719,7 +684,6 @@ a {
 .button:active svg {
   fill: var(--logo-focus);
 }
-
 
 /* Страница каталога */
 
@@ -765,18 +729,9 @@ a {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 22px;
-  /* margin: 0;
-  font-size: 16px;
-  font-weight: 700; */
 }
 
 .infrastructure-item-price {
-  /* font-size: 16px;
-  line-height: 21px;
-  font-weight: 700;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 22px; */
   margin: 0;
   font-size: 16px;
   font-weight: 700;
@@ -789,7 +744,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 2px;
-
 }
 
 .infrastructure-list {
@@ -800,7 +754,6 @@ a {
   list-style: none;
   flex-direction: column;
 }
-
 
 .filter-option {
   margin-top: 4px;
@@ -837,7 +790,6 @@ a {
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-
 
 .filter-input-checkbox:disabled+label::before {
   content: "";
@@ -994,7 +946,6 @@ a {
   color: var(--basic-black);
 }
 
-
 /* Блок сотрировки */
 
 .find {
@@ -1005,7 +956,6 @@ a {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: var(--border-color);
-
 }
 
 .find-desc {
@@ -1027,7 +977,6 @@ a {
   display: flex;
   align-items: center;
 }
-
 
 .sorting-title {
   font-size: 12px;
@@ -1086,8 +1035,6 @@ a {
   line-height: 18px;
   border-bottom: none;
 }
-
-
 
 .sorting-type svg {
   fill: var(--basic-black-opacity);
@@ -1256,7 +1203,6 @@ a {
   margin-top: 42px;
   padding: 2px 12px;
 }
-
 
 .search-parameter-price {
   display: flex;
