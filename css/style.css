@@ -23,6 +23,8 @@
   --logo-focus: #BDBBBC;
   --form-button: #A9A9A9;
   --shadow: rgb(171, 171, 171 0.3);
+  --shadow-appointment-form: rgba(0, 1, 1, 0.15);
+  --shadow-container: rgba(0, 1, 1, 0.2);
   --toggle: #ababab;
   --disabled-color: #6A6A6A;
 }
@@ -78,7 +80,7 @@ a {
   width: 1200px;
   margin: 0 auto;
   position: relative;
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0px 5px 15px var(--shadow-container);
   background-color: var(--basic-white);
 }
 
@@ -103,6 +105,7 @@ a {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .item {
@@ -401,13 +404,41 @@ a {
 }
 
 .appointment-form {
+  display: block;
+  vertical-align: top;
   padding: 55px;
   position: absolute;
+  z-index: 1;
+  transform-origin: top;
   background-color: var(--basic-white);
   width: 100%;
   box-sizing: border-box;
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  box-shadow: 0px 7px 15px var(--shadow-appointment-form);
+
 }
+
+
+@keyframes show {
+  0% {
+    transform: scaleY(0) translateY(-100%);
+  }
+
+  100% {
+    transform: scaleY(1) translateY(0);
+  }
+}
+
+
+.appointment-form-show {
+  display: block;
+  animation: show 0.75s forwards;
+}
+
+.appointment-form-close {
+  display: none;
+}
+
+
 
 .appointment-item {
   font-size: 14px;
@@ -579,6 +610,7 @@ a {
 
 .search-button-find:active {
   background-color: var(--more-focus);
+  color: var(--transparent-white);
 }
 
 /* Футер */
@@ -779,26 +811,26 @@ a {
   user-select: none;
 }
 
-.filter-input-checkbox+label::before {
+.filter-input-checkbox:not(:disabled)+label::before {
   content: "";
   position: absolute;
   left: -42px;
   width: 23px;
   height: 23px;
-  background-image: url(../img/icon-checkbox-off.svg);
+  background-image: url("../img/icon-checkbox-off.svg");
   background-repeat: no-repeat;
 }
 
 .filter-input-checkbox:checked+label::before {
   width: 27px;
   height: 23px;
-  background-image: url(../img/icon-checkbox-on.svg);
+  background-image: url("../img/icon-checkbox-on.svg");
 }
 
 .filter-input-checkbox:disabled+label::before {
   content: "";
   position: absolute;
-  left: -35px;
+  left: -42px;
   top: 0;
   width: 23px;
   height: 23px;
@@ -1117,9 +1149,16 @@ a {
   text-align: left;
 }
 
+.hotel-more-column p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 110px;
+}
+
 .hotel-more-column .button {
   margin-top: 8px;
-  outline: none;
+
 }
 
 .hotel-more .button {
@@ -1141,13 +1180,11 @@ a {
 }
 
 .hotel-more-column .button:hover {
-  margin-top: 8px;
   background-color: var(--more-hover);
   color: var(--basic-white);
 }
 
 .hotel-more-column .button:active {
-  margin-top: 8px;
   background-color: var(--more-focus);
   color: var(--transparent-white);
 }
